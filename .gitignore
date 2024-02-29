@@ -1,0 +1,10 @@
+# Ignorar archivos de configuración
+Web.config
+App.config
+
+# Ignorar archivos generados automáticamente
+/obj/
+/bin/
+
+# Ignorar archivos de registro
+*.log
