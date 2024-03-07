@@ -1,6 +1,4 @@
 # Ignorar archivos de configuración
-Web.config
-App.config
 
 # Ignorar archivos generados automáticamente
 /obj/
