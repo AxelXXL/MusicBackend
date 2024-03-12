@@ -3,8 +3,10 @@ using MusicBackend.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace MusicBackend.Controllers
 {
@@ -20,11 +22,11 @@ namespace MusicBackend.Controllers
         #endregion
 
         [Auth]
-        [Route("api/Canciones")]
-        [HttpGet]
-        public List<tb_Cancion> GetCanciones()
+        [System.Web.Http.Route("api/Canciones")]
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage GetCanciones(int? ID_Cancion)
         {
-            return _musicServices.GetCanciones();
+            return _musicServices.GetCanciones(ID_Cancion);
         }
     }
 }

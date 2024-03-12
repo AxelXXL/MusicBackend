@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\MusicBackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\services\\loginservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\loginservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 229,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MusicController.cs",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Controllers\\MusicController.cs",
+              "RelativeDocumentMoniker": "MusicBackend\\Controllers\\MusicController.cs",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Controllers\\MusicController.cs",
+              "RelativeToolTip": "MusicBackend\\Controllers\\MusicController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T01:03:33.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MusicServices.cs",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Services\\MusicServices.cs",
+              "RelativeDocumentMoniker": "MusicBackend\\Services\\MusicServices.cs",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Services\\MusicServices.cs",
+              "RelativeToolTip": "MusicBackend\\Services\\MusicServices.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAwCIAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T01:02:15.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginServices.cs",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Services\\LoginServices.cs",
+              "RelativeDocumentMoniker": "MusicBackend\\Services\\LoginServices.cs",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Services\\LoginServices.cs",
+              "RelativeToolTip": "MusicBackend\\Services\\LoginServices.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAUwIAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T01:01:22.784Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 240,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

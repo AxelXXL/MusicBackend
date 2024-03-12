@@ -16,4 +16,11 @@ namespace MusicBackend.Models
         public string ConfirmPassword { get; set; }
         public int ID_Rol { get; set; }
     }
+
+    public class LoginResponseModel
+    {
+        public int ID_USUARIO { get; set; }
+        public string Nombre_Usuario { get; set; }
+        public string Contrasena { get; set; }
+    }
 }

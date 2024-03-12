@@ -3,8 +3,10 @@ using MusicBackend.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.Mvc;
 
 namespace MusicBackend.Controllers
 {
@@ -22,11 +24,19 @@ namespace MusicBackend.Controllers
         #endregion
 
         [Auth]
-        [Route("api/Register")]
-        [HttpPost]
-        public String Register(RegisterModel user)
+        [System.Web.Http.Route("api/Register")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage Register(RegisterModel user)
         {
             return _loginServices.Register(user);
+        }
+
+        [Auth]
+        [System.Web.Http.Route("api/Login")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage Login(LoginResponseModel user)
+        {
+            return _loginServices.Login(user);
         }
     }
 }
