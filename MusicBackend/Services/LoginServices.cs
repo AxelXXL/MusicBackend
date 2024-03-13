@@ -97,10 +97,9 @@ namespace MusicBackend.Services
 
                     cn.Open();
 
-                    user.ID_USUARIO = Convert.ToInt32(cmd.ExecuteScalar().ToString());
                 }
 
-                if (user.ID_USUARIO != 0)
+                if (user.Nombre_Usuario != null)
                 {
                     return new HttpResponseMessage(HttpStatusCode.OK)
                     {
