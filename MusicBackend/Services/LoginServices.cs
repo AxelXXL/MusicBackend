@@ -52,7 +52,7 @@ namespace MusicBackend.Services
                 SqlCommand cmd = new SqlCommand("sp_registerUser", conn);
                 cmd.Parameters.AddWithValue("User", user.NombreUsuario);
                 cmd.Parameters.AddWithValue("Password", user.Contrasena);
-                cmd.Parameters.AddWithValue("ID_Rol", user.ID_Rol);
+                cmd.Parameters.AddWithValue("ID_Rol", 3);
                 cmd.Parameters.Add("Registrado", SqlDbType.Bit).Direction = ParameterDirection.Output;
                 cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
                 cmd.CommandType = CommandType.StoredProcedure;
