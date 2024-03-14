@@ -97,6 +97,10 @@ namespace MusicBackend.Services
 
                     cn.Open();
 
+<<<<<<< HEAD
+                   
+=======
+>>>>>>> 8be39adb46e0d9c77615bb5b096eb1d5ff189acf
                 }
 
                 if (user.Nombre_Usuario != null)
