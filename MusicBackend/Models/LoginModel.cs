@@ -19,7 +19,6 @@ namespace MusicBackend.Models
 
     public class LoginResponseModel
     {
-        public int ID_USUARIO { get; set; }
         public string Nombre_Usuario { get; set; }
         public string Contrasena { get; set; }
     }
