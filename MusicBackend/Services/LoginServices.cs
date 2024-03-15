@@ -82,7 +82,7 @@ namespace MusicBackend.Services
 
 
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage Login(LoginResponseModel user)
+        public HttpResponseMessage Login(LoginRequestModel user)
         {
             try
             {
@@ -97,21 +97,26 @@ namespace MusicBackend.Services
 
                     cn.Open();
 
-                }
+                    LoginResponseModel userLogger = new LoginResponseModel()
+                    {
+                        Nombre_Usuario = user.Nombre_Usuario,
+                        ID_Rol = Convert.ToInt32(cmd.ExecuteScalar().ToString())
+                    };
 
-                if (user.Nombre_Usuario != null)
-                {
-                    return new HttpResponseMessage(HttpStatusCode.OK)
+                    if (user.Nombre_Usuario != null)
                     {
-                        Content = new ObjectContent<LoginResponseModel>(user, new JsonMediaTypeFormatter())
-                    };
-                }
-                else
-                {
-                    return new HttpResponseMessage(HttpStatusCode.NotFound)
+                        return new HttpResponseMessage(HttpStatusCode.OK)
+                        {
+                            Content = new ObjectContent<LoginResponseModel>(userLogger, new JsonMediaTypeFormatter())
+                        };
+                    }
+                    else
                     {
-                        Content = new StringContent("Usuario no encontrado.")
-                    };
+                        return new HttpResponseMessage(HttpStatusCode.NotFound)
+                        {
+                            Content = new StringContent("Usuario no encontrado.")
+                        };
+                    }
                 }
             }
             catch (Exception ex)
