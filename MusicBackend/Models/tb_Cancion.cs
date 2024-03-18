@@ -9,7 +9,6 @@
 
 namespace MusicBackend.Models
 {
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     
@@ -32,27 +31,16 @@ namespace MusicBackend.Models
         public string Ruta_Audio { get; set; }
         public int Duracion_Cancion { get; set; }
         public byte[] Caratula_Cancion { get; set; }
-
-        [JsonIgnore]
+    
         public virtual tb_Album tb_Album { get; set; }
-
-        [JsonIgnore]
         public virtual tb_Artista tb_Artista { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-        [JsonIgnore]
         public virtual ICollection<tb_Comentarios> tb_Comentarios { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-        [JsonIgnore]
         public virtual ICollection<tb_DisLikeMusic> tb_DisLikeMusic { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-        [JsonIgnore]
         public virtual ICollection<tb_LikeMusic> tb_LikeMusic { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-
-        [JsonIgnore]
         public virtual ICollection<tb_Playlist> tb_Playlist { get; set; }
     }
 }

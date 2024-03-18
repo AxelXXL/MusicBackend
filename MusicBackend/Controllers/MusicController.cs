@@ -28,5 +28,13 @@ namespace MusicBackend.Controllers
         {
             return _musicServices.GetCanciones(ID_Cancion);
         }
+
+        [Auth]
+        [System.Web.Http.Route("api/SaveSong")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage SaveMetadataSong(string archivo)
+        {
+            return _musicServices.SaveMetadataSong(archivo);
+        }
     }
 }
