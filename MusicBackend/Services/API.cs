@@ -31,7 +31,7 @@ namespace MusicBackend.Services
             return String.Format("bearer {0}", Security.Encrypt(JsonConvert.SerializeObject(model)));
         }
 
-        public static bool isValidToken(String Token, Int32 Minutes = 15)
+        public static bool isValidToken(String Token, Int32 Minutes = 360)
         {
             bool isValid = true;
             if (!Token.Contains("bearer "))

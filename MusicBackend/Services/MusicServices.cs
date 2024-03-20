@@ -20,6 +20,7 @@ namespace MusicBackend.Services
     {
         private readonly BD_LOSS_SOUNDSEntities db = new BD_LOSS_SOUNDSEntities();
 
+        #region GET
         [System.Web.Http.HttpGet]
         public HttpResponseMessage GetCanciones(int? ID_Cancion)
         {
@@ -78,8 +79,96 @@ namespace MusicBackend.Services
             }
         }
 
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage GetSongsPerArtist(int ID_Artist)
+        {
+            try
+            {
+                IEnumerable<object> songs;
 
-        [System.Web.Http.HttpPost]
+                songs = db.tb_Cancion.Where(x => x.ID_ARTISTA == ID_Artist).Select(x => new
+                {
+                    x.ID_CANCION,  x.Nombre_Cancion,
+                    x.Numero_Cancion,
+                    x.Duracion_Cancion,
+                    x.ID_ARTISTA,
+                    x.ID_ALBUM,
+                    x.Ruta_Audio,
+                    x.Caratula_Cancion
+                }).ToList();
+
+                if (songs == null || songs.Count() <= 0)
+                {
+                    return new HttpResponseMessage(HttpStatusCode.NoContent)
+                    {
+                        Content = new StringContent("No se encontro ninguna cancion con el artista indicado.")
+                    };
+                }
+                else
+                {
+                    return new HttpResponseMessage(HttpStatusCode.OK)
+                    {
+                        Content = new ObjectContent<List<object>>(songs.Cast<object>().ToList(), new JsonMediaTypeFormatter())
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new HttpResponseMessage(HttpStatusCode.InternalServerError)
+                {
+                    Content = new StringContent("Ocurrió un error inesperado. Más información: " + ex.Message)
+                };
+            }
+        }
+
+
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage GetSongsPerAlbum(int ID_Album)
+        {
+            try
+            {
+                IEnumerable<object> songs;
+
+                songs = db.tb_Cancion.Where(x => x.ID_ALBUM == ID_Album).Select(x => new
+                {
+                    x.ID_CANCION,
+                    x.Nombre_Cancion,
+                    x.Numero_Cancion,
+                    x.Duracion_Cancion,
+                    x.ID_ARTISTA,
+                    x.ID_ALBUM,
+                    x.Ruta_Audio,
+                    x.Caratula_Cancion
+                }).ToList();
+
+                if (songs == null || songs.Count() <= 0)
+                {
+                    return new HttpResponseMessage(HttpStatusCode.NoContent)
+                    {
+                        Content = new StringContent("No se encontro ninguna cancion con el album indicado.")
+                    };
+                }
+                else
+                {
+                    return new HttpResponseMessage(HttpStatusCode.OK)
+                    {
+                        Content = new ObjectContent<List<object>>(songs.Cast<object>().ToList(), new JsonMediaTypeFormatter())
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new HttpResponseMessage(HttpStatusCode.InternalServerError)
+                {
+                    Content = new StringContent("Ocurrió un error inesperado. Más información: " + ex.Message)
+                };
+            }
+        }
+            #endregion
+
+        #region POST
+
+            [System.Web.Http.HttpPost]
         public HttpResponseMessage SaveMetadataSong(string archivo)
         {
             try
@@ -184,6 +273,7 @@ namespace MusicBackend.Services
             }
         }
 
+        #endregion
 
     }
 }
