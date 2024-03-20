@@ -82,7 +82,7 @@ namespace MusicBackend.Services
 
 
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage Login(LoginResponseModel user)
+        public HttpResponseMessage Login(LoginRequestModel user)
         {
             try
             {
@@ -91,27 +91,44 @@ namespace MusicBackend.Services
                 using (SqlConnection cn = new SqlConnection(db.Database.Connection.ConnectionString))
                 {
                     SqlCommand cmd = new SqlCommand("sp_ValidarUsuario", cn);
-                    cmd.Parameters.AddWithValue("User", user.Nombre_Usuario);
-                    cmd.Parameters.AddWithValue("Password", user.Contrasena);
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    // Parámetros de entrada
+                    cmd.Parameters.AddWithValue("@User", user.Nombre_Usuario);
+                    cmd.Parameters.AddWithValue("@Password", user.Contrasena);
+
+                    // Parámetro de salida
+                    SqlParameter loggeadoParam = new SqlParameter("@Loggeado", SqlDbType.Bit);
+                    loggeadoParam.Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add(loggeadoParam);
+
                     cn.Open();
+                    cmd.ExecuteNonQuery();
 
-                }
+                    bool loggeado = (bool)cmd.Parameters["@Loggeado"].Value;
 
-                if (user.Nombre_Usuario != null)
-                {
-                    return new HttpResponseMessage(HttpStatusCode.OK)
+                    if (loggeado)
                     {
-                        Content = new ObjectContent<LoginResponseModel>(user, new JsonMediaTypeFormatter())
-                    };
-                }
-                else
-                {
-                    return new HttpResponseMessage(HttpStatusCode.NotFound)
+                        int idRol = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        LoginResponseModel userLogger = new LoginResponseModel()
+                        {
+                            Nombre_Usuario = user.Nombre_Usuario,
+                            ID_Rol = idRol
+                        };
+
+                        return new HttpResponseMessage(HttpStatusCode.OK)
+                        {
+                            Content = new ObjectContent<LoginResponseModel>(userLogger, new JsonMediaTypeFormatter())
+                        };
+                    }
+                    else
                     {
-                        Content = new StringContent("Usuario no encontrado.")
-                    };
+                        return new HttpResponseMessage(HttpStatusCode.Unauthorized)
+                        {
+                            Content = new StringContent("Credenciales inválidas.")
+                        };
+                    }
                 }
             }
             catch (Exception ex)
@@ -122,6 +139,7 @@ namespace MusicBackend.Services
                 };
             }
         }
+
 
 
     }

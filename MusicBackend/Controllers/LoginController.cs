@@ -34,7 +34,7 @@ namespace MusicBackend.Controllers
         [Auth]
         [System.Web.Http.Route("api/Login")]
         [System.Web.Http.HttpPost]
-        public HttpResponseMessage Login(LoginResponseModel user)
+        public HttpResponseMessage Login(LoginRequestModel user)
         {
             return _loginServices.Login(user);
         }

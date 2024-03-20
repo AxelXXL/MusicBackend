@@ -28,6 +28,7 @@ namespace MusicBackend.Models
         public string Nombre_Usuario { get; set; }
         public string Contrasena { get; set; }
         public Nullable<int> ID_Rol { get; set; }
+        public bool Active { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_Comentarios> tb_Comentarios { get; set; }

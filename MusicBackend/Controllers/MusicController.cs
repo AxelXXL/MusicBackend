@@ -21,6 +21,8 @@ namespace MusicBackend.Controllers
         }
         #endregion
 
+        #region GET
+
         [Auth]
         [System.Web.Http.Route("api/Canciones")]
         [System.Web.Http.HttpGet]
@@ -28,5 +30,33 @@ namespace MusicBackend.Controllers
         {
             return _musicServices.GetCanciones(ID_Cancion);
         }
+
+        [Auth]
+        [System.Web.Http.Route("api/GetSongsPerArtist")]
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage GetSongsPerArtist(int ID_Artist)
+        {
+            return _musicServices.GetSongsPerArtist(ID_Artist);
+        }
+        
+        [Auth]
+        [System.Web.Http.Route("api/GetSongsPerAlbum")]
+        [System.Web.Http.HttpGet]
+        public HttpResponseMessage GetSongsPerAlbum(int ID_Album)
+        {
+            return _musicServices.GetSongsPerAlbum(ID_Album);
+        }
+
+        #endregion
+
+        #region POST
+        [Auth]
+        [System.Web.Http.Route("api/SaveSong")]
+        [System.Web.Http.HttpPost]
+        public HttpResponseMessage SaveMetadataSong(string archivo)
+        {
+            return _musicServices.SaveMetadataSong(archivo);
+        }
+        #endregion
     }
 }

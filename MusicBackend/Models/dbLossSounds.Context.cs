@@ -38,7 +38,7 @@ namespace MusicBackend.Models
         public virtual DbSet<tb_Seguidos> tb_Seguidos { get; set; }
         public virtual DbSet<tb_Usuario> tb_Usuario { get; set; }
     
-        public virtual int sp_registerUser(string user, string password, ObjectParameter registrado, ObjectParameter mensaje)
+        public virtual int sp_registerUser(string user, string password, Nullable<int> iD_Rol, ObjectParameter registrado, ObjectParameter mensaje)
         {
             var userParameter = user != null ?
                 new ObjectParameter("User", user) :
@@ -48,10 +48,14 @@ namespace MusicBackend.Models
                 new ObjectParameter("Password", password) :
                 new ObjectParameter("Password", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_registerUser", userParameter, passwordParameter, registrado, mensaje);
+            var iD_RolParameter = iD_Rol.HasValue ?
+                new ObjectParameter("ID_Rol", iD_Rol) :
+                new ObjectParameter("ID_Rol", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_registerUser", userParameter, passwordParameter, iD_RolParameter, registrado, mensaje);
         }
     
-        public virtual ObjectResult<Nullable<int>> sp_ValidarUsuario(string user, string password)
+        public virtual ObjectResult<Nullable<int>> sp_ValidarUsuario(ObjectParameter loggeado, string user, string password)
         {
             var userParameter = user != null ?
                 new ObjectParameter("User", user) :
@@ -61,7 +65,7 @@ namespace MusicBackend.Models
                 new ObjectParameter("Password", password) :
                 new ObjectParameter("Password", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_ValidarUsuario", userParameter, passwordParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_ValidarUsuario", loggeado, userParameter, passwordParameter);
         }
     }
 }

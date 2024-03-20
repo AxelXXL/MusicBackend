@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BD_LOSS_SOUNDSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BD_LOSS_SOUNDSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_Album">
           <Key>
             <PropertyRef Name="ID_ALBUM" />
@@ -95,6 +95,7 @@
           <Property Name="Nombre_Usuario" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="Contrasena" Type="varchar(max)" Nullable="false" />
           <Property Name="ID_Rol" Type="int" />
+          <Property Name="Active" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK__tb_Usuari__ID_Ro__01142BA1">
           <End Role="tb_RolesPrivacidad" Type="Self.tb_RolesPrivacidad" Multiplicity="0..1" />
@@ -279,10 +280,12 @@
         <Function Name="sp_registerUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="User" Type="varchar" Mode="In" />
           <Parameter Name="Password" Type="varchar(max)" Mode="In" />
+          <Parameter Name="ID_Rol" Type="int" Mode="In" />
           <Parameter Name="Registrado" Type="bit" Mode="InOut" />
           <Parameter Name="Mensaje" Type="varchar" Mode="InOut" />
         </Function>
         <Function Name="sp_ValidarUsuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Loggeado" Type="bit" Mode="InOut" />
           <Parameter Name="User" Type="varchar" Mode="In" />
           <Parameter Name="Password" Type="varchar(max)" Mode="In" />
         </Function>
@@ -358,8 +361,7 @@
             <End Role="tb_Seguidos" EntitySet="tb_Seguidos" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BD_LOSS_SOUNDSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -483,6 +485,7 @@
           <NavigationProperty Name="tb_Playlist" Relationship="Self.FK_PlayList_to_Usuario" FromRole="tb_Usuario" ToRole="tb_Playlist" />
           <NavigationProperty Name="tb_RolesPrivacidad" Relationship="Self.FK__tb_Usuari__ID_Ro__01142BA1" FromRole="tb_Usuario" ToRole="tb_RolesPrivacidad" />
           <NavigationProperty Name="tb_Seguidos" Relationship="Self.FK_SEGUIDOS_TO_USERS" FromRole="tb_Usuario" ToRole="tb_Seguidos" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_Album_to_Artista">
           <End Role="tb_Artista" Type="Self.tb_Artista" Multiplicity="1" />
@@ -738,10 +741,12 @@
           <FunctionImport Name="sp_registerUser">
             <Parameter Name="User" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
+            <Parameter Name="ID_Rol" Mode="In" Type="Int32" />
             <Parameter Name="Registrado" Mode="InOut" Type="Boolean" />
             <Parameter Name="Mensaje" Mode="InOut" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_ValidarUsuario" ReturnType="Collection(Int32)">
+            <Parameter Name="Loggeado" Mode="InOut" Type="Boolean" />
             <Parameter Name="User" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
@@ -846,6 +851,7 @@
           <EntitySetMapping Name="tb_Usuario">
             <EntityTypeMapping TypeName="BD_LOSS_SOUNDSModel.tb_Usuario">
               <MappingFragment StoreEntitySet="tb_Usuario">
+                <ScalarProperty Name="Active" ColumnName="Active" />
                 <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
                 <ScalarProperty Name="Nombre_Usuario" ColumnName="Nombre_Usuario" />
                 <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
