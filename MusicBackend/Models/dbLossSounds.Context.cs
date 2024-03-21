@@ -37,6 +37,7 @@ namespace MusicBackend.Models
         public virtual DbSet<tb_RolesPrivacidad> tb_RolesPrivacidad { get; set; }
         public virtual DbSet<tb_Seguidos> tb_Seguidos { get; set; }
         public virtual DbSet<tb_Usuario> tb_Usuario { get; set; }
+        public virtual DbSet<ExceptionLog> ExceptionLog { get; set; }
     
         public virtual int sp_registerUser(string user, string password, Nullable<int> iD_Rol, ObjectParameter registrado, ObjectParameter mensaje)
         {

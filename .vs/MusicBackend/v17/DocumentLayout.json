@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\MusicBackend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\services\\baseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\baseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,52 +50,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Global.asax.cs",
-              "RelativeDocumentMoniker": "MusicBackend\\Global.asax.cs",
-              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Global.asax.cs",
-              "RelativeToolTip": "MusicBackend\\Global.asax.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T23:37:21.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Web.config",
               "RelativeDocumentMoniker": "MusicBackend\\Web.config",
               "ToolTip": "C:\\MusicBackend\\MusicBackend\\Web.config",
               "RelativeToolTip": "MusicBackend\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEsAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2024-03-19T22:40:50.823Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MusicServices.cs",
               "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Services\\MusicServices.cs",
               "RelativeDocumentMoniker": "MusicBackend\\Services\\MusicServices.cs",
               "ToolTip": "C:\\MusicBackend\\MusicBackend\\Services\\MusicServices.cs",
               "RelativeToolTip": "MusicBackend\\Services\\MusicServices.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAKgAAAAIAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAArwBYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-17T19:19:18.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NLog.config",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\NLog.config",
+              "RelativeDocumentMoniker": "MusicBackend\\NLog.config",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\NLog.config",
+              "RelativeToolTip": "MusicBackend\\NLog.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-20T04:36:53.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Global.asax.cs",
+              "RelativeDocumentMoniker": "MusicBackend\\Global.asax.cs",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Global.asax.cs",
+              "RelativeToolTip": "MusicBackend\\Global.asax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T05:50:25.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "BaseServices.cs",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Services\\BaseServices.cs",
+              "RelativeDocumentMoniker": "MusicBackend\\Services\\BaseServices.cs",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Services\\BaseServices.cs",
+              "RelativeToolTip": "MusicBackend\\Services\\BaseServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-20T21:59:05.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MusicController.cs",
               "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Controllers\\MusicController.cs",
               "RelativeDocumentMoniker": "MusicBackend\\Controllers\\MusicController.cs",
               "ToolTip": "C:\\MusicBackend\\MusicBackend\\Controllers\\MusicController.cs",
               "RelativeToolTip": "MusicBackend\\Controllers\\MusicController.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAA0AAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAkwB8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-17T19:19:12.983Z",
               "EditorCaption": ""

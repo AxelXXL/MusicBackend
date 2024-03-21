@@ -30,6 +30,7 @@
         <AssociationConnector Association="BD_LOSS_SOUNDSModel.FK_PlayList_to_Usuario" ManuallyRouted="false" />
         <AssociationConnector Association="BD_LOSS_SOUNDSModel.FK__tb_Usuari__ID_Ro__01142BA1" ManuallyRouted="false" />
         <AssociationConnector Association="BD_LOSS_SOUNDSModel.FK_SEGUIDOS_TO_USERS" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BD_LOSS_SOUNDSModel.ExceptionLog" Width="1.5" PointX="4.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
