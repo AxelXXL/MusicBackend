@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\MusicBackend\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,18 +18,31 @@
     {
       "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|c:\\musicbackend\\musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> parent of 59fc09f (Configuracion y manejo de logs)
     },
     {
       "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\controllers\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\services\\baseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\baseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|C:\\MusicBackend\\musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9552EA98-EAC3-44D0-A24D-E8FA91B1FFEC}|MusicBackend\\MusicBackend.csproj|solutionrelative:musicbackend\\services\\musicservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> parent of 59fc09f (Configuracion y manejo de logs)
     }
   ],
   "DocumentGroupContainers": [
@@ -54,6 +68,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Properties\\AssemblyInfo.cs",
@@ -63,6 +78,30 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T01:08:47.194Z",
+=======
+              "DocumentIndex": 1,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Global.asax.cs",
+              "RelativeDocumentMoniker": "MusicBackend\\Global.asax.cs",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Global.asax.cs",
+              "RelativeToolTip": "MusicBackend\\Global.asax.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T23:37:21.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Web.config",
+              "RelativeDocumentMoniker": "MusicBackend\\Web.config",
+              "ToolTip": "C:\\MusicBackend\\MusicBackend\\Web.config",
+              "RelativeToolTip": "MusicBackend\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-03-19T22:40:50.823Z",
+>>>>>>> parent of 59fc09f (Configuracion y manejo de logs)
               "EditorCaption": ""
             },
             {
@@ -73,13 +112,18 @@
               "RelativeDocumentMoniker": "MusicBackend\\Services\\MusicServices.cs",
               "ToolTip": "C:\\MusicBackend\\MusicBackend\\Services\\MusicServices.cs",
               "RelativeToolTip": "MusicBackend\\Services\\MusicServices.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAtAAAA",
+=======
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAKgAAAAIAAAA",
+>>>>>>> parent of 59fc09f (Configuracion y manejo de logs)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-17T19:19:18.392Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "Web.config",
               "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Web.config",
@@ -131,12 +175,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+=======
+              "DocumentIndex": 2,
+>>>>>>> parent of 59fc09f (Configuracion y manejo de logs)
               "Title": "MusicController.cs",
               "DocumentMoniker": "C:\\MusicBackend\\MusicBackend\\Controllers\\MusicController.cs",
               "RelativeDocumentMoniker": "MusicBackend\\Controllers\\MusicController.cs",
               "ToolTip": "C:\\MusicBackend\\MusicBackend\\Controllers\\MusicController.cs",
               "RelativeToolTip": "MusicBackend\\Controllers\\MusicController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAkwB8AAAAIAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACoAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-17T19:19:12.983Z"
             }

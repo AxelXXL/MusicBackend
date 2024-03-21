@@ -12,20 +12,21 @@ using System.Net;
 using System.Web.Http;
 using Antlr.Runtime.Tree;
 using TagLib;
-using NLog;
 
 
 namespace MusicBackend.Services
 {
-    public class MusicServices : BaseServices
+    public class MusicServices : ApiController
     {
-       
+        private readonly BD_LOSS_SOUNDSEntities db = new BD_LOSS_SOUNDSEntities();
+
         #region GET
         [System.Web.Http.HttpGet]
         public HttpResponseMessage GetCanciones(int? ID_Cancion)
         {
             try
             {
+
                 IEnumerable<object> canciones;
                 if (ID_Cancion != null)
                 {
@@ -40,7 +41,6 @@ namespace MusicBackend.Services
                         x.Ruta_Audio,
                         x.Caratula_Cancion
                     }).ToList();
-                    logger.Info($"Se consulto metodo de canciones por parametro con el ID {ID_Cancion}");
                 }
                 else
                 {
@@ -55,14 +55,10 @@ namespace MusicBackend.Services
                         x.Ruta_Audio,
                         x.Caratula_Cancion
                     }).ToList();
-
-                    logger.Info("Se consulto metodo de canciones sin parametro");
                 }
 
                 if (canciones.Count() == 0)
                 {
-                    logger.Warn("No se encontro ninguna cancion con el ID " + ID_Cancion);
-
                     return new HttpResponseMessage(HttpStatusCode.NoContent)
                     {
                         Content = new StringContent("No se encontro la canción solicitada.")
@@ -76,7 +72,6 @@ namespace MusicBackend.Services
             }
             catch (Exception ex)
             {
-                logger.Error($"Ocurrió un error inesperado. Más información: {ex}");
                 return new HttpResponseMessage(HttpStatusCode.InternalServerError)
                 {
                     Content = new StringContent("Ocurrió un error inesperado. Más información: " + ex.Message)
@@ -104,7 +99,6 @@ namespace MusicBackend.Services
 
                 if (songs == null || songs.Count() <= 0)
                 {
-                    logger.Warn($"No se encontro ninguna cancion del artista con el ID {ID_Artist}");
                     return new HttpResponseMessage(HttpStatusCode.NoContent)
                     {
                         Content = new StringContent("No se encontro ninguna cancion con el artista indicado.")
@@ -112,7 +106,6 @@ namespace MusicBackend.Services
                 }
                 else
                 {
-                    logger.Info($"Se consultaron canciones mediante el artista con el ID {ID_Artist}");
                     return new HttpResponseMessage(HttpStatusCode.OK)
                     {
                         Content = new ObjectContent<List<object>>(songs.Cast<object>().ToList(), new JsonMediaTypeFormatter())
@@ -121,7 +114,6 @@ namespace MusicBackend.Services
             }
             catch (Exception ex)
             {
-                logger.Error($"Ocurrió un error inesperado. Más información: {ex}");
                 return new HttpResponseMessage(HttpStatusCode.InternalServerError)
                 {
                     Content = new StringContent("Ocurrió un error inesperado. Más información: " + ex.Message)

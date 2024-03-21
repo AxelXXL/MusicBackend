@@ -52,14 +52,8 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.5.2.8\lib\net46\NLog.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog.Database, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.Database.5.2.8\lib\net46\NLog.Database.dll</HintPath>
-    </Reference>
-    <Reference Include="NLog.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.Web.5.3.8\lib\net46\NLog.Web.dll</HintPath>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -201,9 +195,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbLossSounds.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\ExceptionLog.cs">
-      <DependentUpon>dbLossSounds.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ExtendModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\tb_Album.cs">
@@ -307,7 +298,6 @@
     <Content Include="Models\dbLossSounds.edmx.diagram">
       <DependentUpon>dbLossSounds.edmx</DependentUpon>
     </Content>
-    <Content Include="NLog.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

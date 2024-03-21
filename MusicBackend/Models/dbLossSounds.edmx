@@ -5,18 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="BD_LOSS_SOUNDSModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="ExceptionLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="RecordDate" Type="datetime" Nullable="false" />
-          <Property Name="Level" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="Logger" Type="varchar" MaxLength="1000" Nullable="false" />
-          <Property Name="Message" Type="varchar" MaxLength="3600" Nullable="false" />
-          <Property Name="Exception" Type="varchar" MaxLength="3600" />
-          <Property Name="StackTrace" Type="varchar" MaxLength="3600" />
-        </EntityType>
         <EntityType Name="tb_Album">
           <Key>
             <PropertyRef Name="ID_ALBUM" />
@@ -302,7 +290,6 @@
           <Parameter Name="Password" Type="varchar(max)" Mode="In" />
         </Function>
         <EntityContainer Name="BD_LOSS_SOUNDSModelStoreContainer">
-          <EntitySet Name="ExceptionLog" EntityType="Self.ExceptionLog" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Album" EntityType="Self.tb_Album" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Artista" EntityType="Self.tb_Artista" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Cancion" EntityType="Self.tb_Cancion" Schema="dbo" store:Type="Tables" />
@@ -763,20 +750,7 @@
             <Parameter Name="User" Mode="In" Type="String" />
             <Parameter Name="Password" Mode="In" Type="String" />
           </FunctionImport>
-          <EntitySet Name="ExceptionLog" EntityType="BD_LOSS_SOUNDSModel.ExceptionLog" />
         </EntityContainer>
-        <EntityType Name="ExceptionLog">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="RecordDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Level" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="Logger" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
-          <Property Name="Message" Type="String" Nullable="false" MaxLength="3600" FixedLength="false" Unicode="false" />
-          <Property Name="Exception" Type="String" MaxLength="3600" FixedLength="false" Unicode="false" />
-          <Property Name="StackTrace" Type="String" MaxLength="3600" FixedLength="false" Unicode="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -887,19 +861,6 @@
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_registerUser" FunctionName="BD_LOSS_SOUNDSModel.Store.sp_registerUser" />
           <FunctionImportMapping FunctionImportName="sp_ValidarUsuario" FunctionName="BD_LOSS_SOUNDSModel.Store.sp_ValidarUsuario" />
-          <EntitySetMapping Name="ExceptionLog">
-            <EntityTypeMapping TypeName="BD_LOSS_SOUNDSModel.ExceptionLog">
-              <MappingFragment StoreEntitySet="ExceptionLog">
-                <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
-                <ScalarProperty Name="Exception" ColumnName="Exception" />
-                <ScalarProperty Name="Message" ColumnName="Message" />
-                <ScalarProperty Name="Logger" ColumnName="Logger" />
-                <ScalarProperty Name="Level" ColumnName="Level" />
-                <ScalarProperty Name="RecordDate" ColumnName="RecordDate" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
